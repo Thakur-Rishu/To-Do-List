@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-do list</title>
+    <link rel="stylesheet" href="TipCalc.css">
+</head>
+<body>
+
+    <div class="mainframe">
+        <p class="heading">To-Do-List</p>
+
+        <div class="innerframe">
+            <input type="text" id="text">
+            <button class="add" id="add" onclick="addTodo()">+</button>
+        </div>
+
+        <div id="todoList"></div>
+
+    </div>
+    
+    <script>
+
+    let todos = []; // to-do item
+
+    function addTodo() {
+        let task = document.getElementById("text").value;
+        
+        if (task.trim() === "") {
+            alert("Please enter a task!");
+            return; 
+        }
+        todos.push(task); 
+        document.getElementById("text").value = "";
+        showTodoList(); // Updateing
+    }
+
+    function showTodoList() {
+        let list = document.getElementById("todoList");
+        list.innerHTML = ""; // Clear previous list
+
+        todos.forEach((todo, index) => {
+            let item = document.createElement("div");
+            item.innerHTML = `
+                <p class="hide">
+                    <button class="complete" onclick="completeTask(${index})">&#10004;</button>
+                    <span class="content">${todo}</span>
+                    <button class="del" onclick="deleteTask(${index})">&#10006;</button>
+                </p>`;
+            list.appendChild(item);
+        });
+    }
+
+    function completeTask(index) {
+        let item = document.querySelectorAll('.content')[index];
+        item.style.textDecoration = "line-through";
+    }
+
+    function deleteTask(index) {
+        todos.splice(index, 1); // Removing task 
+        showTodoList(); 
+    }
+
+    </script>
+    
+</body>
+</html>

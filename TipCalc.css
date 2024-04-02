@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+}
+.mainframe{
+    margin:auto ; 
+    margin-top: 50px;
+    padding: 20px;
+    width: fit-content;
+    border: 2px;
+    border-radius: 20px;
+    background-color: rgb(28, 31, 49);
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+.innerframe, button{
+    margin-top: 20px;
+    border: 1px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+button{
+    margin-left: 10px;
+    color: white;
+    background-color: rgb(228, 80, 105);
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    border: 1px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 2px;
+    border-bottom: 1px solid rgb(228, 80, 105);;
+}
+
+input ,select,.total{
+    padding: 5px;
+    font-size: 15px;
+    border:1px solid rgb(228, 80, 105);
+}
+
+.total{
+    
+    background-color: white;
+}
+
+/* To-Do-List */
+.add{
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+
+.complete{
+    margin:0;
+    font-weight: bold;
+    background-color: white;
+    color: green;
+    border-right:1px solid rgb(228, 80, 105);
+}
+
+.del{
+    margin:0;
+    background-color: white;
+    font-weight: bold;
+    color: red;
+    float: right;
+    /* border:1px solid rgb(228, 80, 105); */
+}
+
+.content{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+}
+
+.hide{
+    border:1px solid rgb(228, 80, 105);
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 5px;
+
+}
+
+.complete:hover, .edit:hover, .del:hover{
+    background-color:rgb(245, 169, 182); ;
+}
